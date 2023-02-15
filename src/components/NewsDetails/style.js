@@ -97,6 +97,29 @@ export const StyledNewsDetailsMain = styled.div`
   margin: 20px 0 10px 0;
 }
 
+@media (max-width: 871px) {
+  .BigImgContainer > img{
+
+    width: 100%;
+    
+  }
+  .BigImgContainer{
+    margin: 0;
+  }
+
+  .newsDetailsTitle-container{
+    margin-top: 0px;
+    width: 100vw;
+  }
+
+  .content-left{
+    width: 100vw;
+    margin: 40px 0;
+
+}
+}
+
+
 
 
  

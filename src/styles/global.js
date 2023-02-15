@@ -55,7 +55,6 @@ body{
 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -169,7 +168,42 @@ body {
   height: 50px;
 }
 
+@media (max-width: 871px) {
+.featured-container{
+  display: block;
+  width: 100%;
+  height: 900px;
+  padding: 0;
+  margin-top: -20px;
+}
 
+.big-img{
+  min-width: 100vw;
+ max-height: 380px;
+  margin-bottom: 10px;
+  padding: 0;
+
+}
+
+.mini-img-container-top{
+  padding: 0;
+  margin: 0;
+}
+
+
+.mini-img-container{
+  min-width: 100vw;
+  max-height: 500px;
+  padding: 0px;
+  margin: 0;
+  
+}
+
+.mini-news{
+  margin: 0px 0px 0px 0px;
+}
+  
+}
 
 
 

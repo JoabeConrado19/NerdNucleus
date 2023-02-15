@@ -13,7 +13,7 @@ export const Header = () => {
                         <li><a href="#">Games</a></li>
                         <li><a href="#">Filmes</a></li>
                         <li><a href="#">Series</a></li>
-                        <li><a href="#">Ciência e Tecnoligia</a></li>
+                        <li><a href="#">Ciência e Tecnologia</a></li>
                         <li><a href="#">Animes</a></li>
                     </ul>
                     <form class="search-form">

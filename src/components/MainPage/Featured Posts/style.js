@@ -69,6 +69,12 @@ border-radius: 4px;
 
 }
 
+@media (max-width: 871px) {
+    .mini-news{
+        margin: 0px;
+    }
+}
+
 .mini-news:hover{
     height: 100%;
     width: 99%;
@@ -126,6 +132,10 @@ border-radius: 4px;
     text-shadow: 1px 1px #000000;
     
 
+}
+
+.main-content{
+    display: block;
 }
 
 

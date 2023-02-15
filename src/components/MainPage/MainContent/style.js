@@ -130,6 +130,33 @@ color: #2c2c54;
 display: flex;
 justify-content: center;
 height: 40px;
+margin: 0;
+padding: 0;
+}
+
+@media (max-width: 871px) {
+    display: block;
+    margin: 0;
+    .container-left{ width: 100vw;
+    margin: 0;
+    }
+
+    .container-right{ width: 100vw;
+    margin: 0;
+    height: 100px;
+    }
+
+    .card-container-left > img{
+        align-items: center;
+        margin-top: 23px;
+
+    }
+
+    .mini-description{
+        align-items: center;
+        display: none;
+
+    }
 }
 
  
