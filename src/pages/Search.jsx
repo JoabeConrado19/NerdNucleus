@@ -8,17 +8,18 @@ import { SingleNewsMain } from "../components/NewsDetails"
 import { RelatedPosts } from "../components/NewsDetails/relatedPosts"
 import api from "../services/api"
 
-export const SingleNews = (props) => {
-    const { id } = useParams();
-    const [post, setPost] = useState(null);
+export const SearchPage = (props) => {
+   
+    const { param } = useParams();
+    const [posts, setPosts] = useState([]);
 
     function GetPosts() {
 
         api
-            .get(`/news/${id}`)
+            .get(`/news/?title=${param}`)
             .then((response) => {
-                setPost(response.data)
-                console.log(response.data)
+                setPosts([...response.data.results])
+                console.log(response.data.results)
 
             })
     }
@@ -28,11 +29,11 @@ export const SingleNews = (props) => {
         GetPosts()
     }, [])
 
-    if (!post) {
-        return <div className="preloader-container"><div class="c-loader"></div></div>;
-    }
+ 
+   
 
-    // const [posts, setPosts] = useState([{}]);
+ 
+
 
     // function GetPosts (){
     //     api
@@ -54,8 +55,11 @@ export const SingleNews = (props) => {
     return (
         <>
             <Header />
-            <SingleNewsMain post={post}/>
-            <RelatedPosts post={post}/>
+            {/* <div className="search-results">
+                <h1>Resultados da pesquisa</h1>
+                <ul></ul>
+            </div> */}
+            <MainContent posts={posts} h2="Resultado da pesquisa"/>
         </>
     )
 }

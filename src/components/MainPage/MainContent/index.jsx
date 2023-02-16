@@ -10,11 +10,12 @@ export const MainContent = (props) => {
 
         <StyledMainContent className="main-content">
             <div className="container-left">
-                <h2>Últimas Notícias</h2>
+                <h2>{props.h2}</h2>
                 <ul>
 
                     {props.posts.map((element, index) => {
-                        if (index > 5) {
+                        console.log(props.posts)
+                        if (element.title) {
                             return (
                                 <li onClick={() => { navigate(`noticia/${element.id}`) }} key={index}>
                                     <div className="card-container-left">

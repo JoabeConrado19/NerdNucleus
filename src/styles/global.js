@@ -91,6 +91,13 @@ body {
 
 .navbar > h1 {
   font-size: 20px;
+  transition: all ease 0.5s;
+}
+
+.navbar > h1:hover {
+  filter: brightness(70%);
+  cursor: pointer;
+  
 }
 
 .nav-links li {
@@ -179,11 +186,12 @@ body {
 
 .big-img{
   min-width: 100vw;
- max-height: 380px;
+  max-height: 380px;
   margin-bottom: 10px;
   padding: 0;
 
 }
+
 
 .mini-img-container-top{
   padding: 0;
@@ -235,8 +243,8 @@ body {
     margin: 0;
     padding: 0;
     background: #0a0c2e;
-    overflow: hidden;
-    z-index: -6;
+
+    z-index: -1;
 }
 .background li {
     position: absolute;
@@ -377,6 +385,34 @@ body {
   .logo {
     height: 40px;
   }
+}
+
+.search-results{
+  width: 100%;
+  border: 1px solid red;
+  height: 1000px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-results >h1{
+  color: white;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+
+}
+
+.search-results >ul{
+  /* background-color: #0a0c2e; */
+  background-color: white;
+  width: 98%;
+  height: 600px;
+  margin-top: 30px;
+
 }
 
 `;
