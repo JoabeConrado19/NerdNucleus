@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://nerdnucleusapi-production.up.railway.app/api",
+  baseURL: "https://nerdnucleusapidjango.onrender.com/api",
   timeout: 10000,
   
 });
