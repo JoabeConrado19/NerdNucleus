@@ -42,6 +42,7 @@ export const RelatedPostsStyles = styled.div`
       flex-direction: column;
       justify-content: end;
       border-radius: 4px;
+      cursor: pointer;
     }
 
     .Related-Card > div{

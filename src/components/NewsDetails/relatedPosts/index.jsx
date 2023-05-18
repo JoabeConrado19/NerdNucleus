@@ -36,7 +36,15 @@ export const RelatedPosts = (props) => {
            {RelatedPosts.map((element, index) => {
                         if (RelatedPosts) {
                             return (
-                                <li className="Related-Card" style={{ backgroundImage: `Url(${element.thumb})` }}>
+                                <li className="Related-Card" style={{ backgroundImage: `Url(${element.thumb})` }} onClick={
+                                    ()=>{navigate(`/noticia/${element.id}`)
+                                    window.location.reload();
+
+                                
+                                }
+
+
+                                    }>
                                     <div>
                                         <h2>{element.title}</h2>
                                         <p>{element.date}</p>
