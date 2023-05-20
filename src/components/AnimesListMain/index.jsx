@@ -15,7 +15,7 @@ export const AnimeListMain = (props) => {
           {props.animes.map((element, index) => {
             console.log(props.posts);
            
-            if (element.title) {
+            if (element.thumb) {
               return (
                 <li
                   onClick={() => {
