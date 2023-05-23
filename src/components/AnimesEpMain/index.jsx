@@ -11,7 +11,7 @@ import { DiscussionEmbed, DisqusThread } from 'disqus-react';
 export const AnimeEpMain = (props) => {
   const navigate = useNavigate();
   const [hd, setHd] = useState(true)
-  const disqusShortname = 'joabeconradoborgescavalcante';
+  const disqusShortname = 'https-nerdnucleus-vercel-app';
   const disqusConfig = {
     url: `https://nerdnucleus.vercel.app/animes/${props.anime.id}`,
     identifier: props.anime.id,
