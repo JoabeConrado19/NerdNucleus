@@ -11,7 +11,7 @@ const RoutesMain = () => {
         <Routes>
             <Route path='/' element={<LandingPage/>} />
             <Route path='/animes' element={<AnimesList/>} />
-            <Route path='/animes/:nome' element={<AnimeEp/>} />
+            <Route path='/animes/:id' element={<AnimeEp/>} />
             <Route path='/:category' element={<LandingPage/>} />
             <Route path='/noticia/:id' element={<SingleNews/>} />
             <Route path='/:category/noticia/:id' element={<SingleNews/>} />

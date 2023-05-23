@@ -1,18 +1,29 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Header } from "../components/Header"
-import { StyledHeader } from "../components/Header/style"
-import { FeaturedPosts } from "../components/MainPage/Featured Posts"
-import { MainContent } from "../components/MainPage/MainContent"
+import { AnimeEpMain } from "../components/AnimesEpMain"
 import api from "../services/api"
 
 export const AnimeEp = (props) => {
 
-    const { nome } = useParams();
-    const [posts, setPosts] = useState([]);
-    const [page, setPage] = useState(1);
-    const [loading, setLoading] = useState(false);
-    const [firstClick, setFirstClick] = useState(false)
+    const { id } = useParams();
+    const [anime, setAnime] = useState([]);
+    const [loading, setLoading] = useState(false)
+    
+
+    useEffect(() => {
+        console.log("fazendo requisição")
+        setLoading(true)
+            api
+                .get(`/animes/${id}`)
+                .then((response) => {
+                    setAnime(response.data)
+                    console.log(response.data)
+                    console.log('rodando api1')
+                    setLoading(false)
+                })
+    }, [])
+    
 
 
 
@@ -35,8 +46,9 @@ export const AnimeEp = (props) => {
 
     return (
         <>
-            <Header setPosts={setPosts} setFirstClick={setFirstClick}/>
-
+            <Header />
+            <AnimeEpMain anime={anime}/>
+            
         </>
     )
 }
